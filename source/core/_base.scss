@@ -1,0 +1,20 @@
+/* core : base - ============================================================================================= - */
+@use '@/scss/units' as unit;
+
+body {
+  background-color: rgb(var(--core-neutral-alabaster));
+  font:
+    var(--core-fontWeight-normal) normal
+    var(--core-fontSize-normal) / var(--core-lineHeight-normal)
+    var(--core-fontFamily-poppins), var(--system-fontFamily-sansSerif)
+  ;
+  color: rgb(var(--core-neutral-cloudy));
+}
+
+main {
+  text-align: center;
+}
+
+:is(h2, h3, p) {
+  overflow-wrap: break-word;
+}
