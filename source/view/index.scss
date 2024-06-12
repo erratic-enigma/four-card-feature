@@ -7,3 +7,8 @@
 @use '@/core/reset';
 @use '@/core/base';
 @use '@/core/utility';
+
+// layouts //
+@use '@/layout/body';
+@use '@/layout/main';
+@use '@/layout/footer';
