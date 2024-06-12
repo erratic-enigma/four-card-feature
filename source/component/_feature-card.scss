@@ -1,0 +1,63 @@
+/* component : feature card - ================================================================================ - */
+@use '@/scss/units' as unit;
+
+.feature-card {
+  & {
+    --feature-card-gap:         #{unit.rem(12)};
+    --feature-card-color:       rgb(var(--core-neutral-alabaster));
+    --feature-card-shadow:      0 #{unit.rem(8)} #{unit.rem(24)} #{unit.rem(-8)} rgb(var(--core-neutral-cloudy));
+    --feature-card-padding:     calc(#{unit.rem(32)} + var(--feature-card-stripThick)) #{unit.rem(32)} #{unit.rem(28)};
+    --feature-card-edgeRadius:  #{unit.rem(8)};
+    --feature-card-stripThick:  #{unit.rem(4)};
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--feature-card-gap);
+    border-radius: var(--feature-card-edgeRadius);
+    padding: var(--feature-card-padding);
+    box-shadow: var(--feature-card-shadow);
+    background-color: var(--feature-card-color);
+    text-align: start;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    border-radius: var(--feature-card-edgeRadius) var(--feature-card-edgeRadius) 0 0;
+    inset: 0 0 calc(100% - var(--feature-card-stripThick)) 0;
+    background-color: var(--feature-card-stripColor, transparent);
+  }
+
+  &.-blue {
+    --feature-card-stripColor: hsl(var(--core-color-cornflowerBlue));
+  }
+
+  &.-cyan {
+    --feature-card-stripColor: hsl(var(--core-color-robinsEggBlue));
+  }
+
+  &.-orange {
+    --feature-card-stripColor: hsl(var(--core-color-texasRose));
+  }
+
+  &.-red {
+    --feature-card-stripColor: hsl(var(--core-color-carnation));
+  }
+
+  > .heading {
+    font-size: var(--core-fontSize-medium);
+    font-weight: var(--core-fontWeight-semiBold);
+    line-height: var(--core-lineHeight-condensed);
+    color: rgb(var(--core-neutral-trout));
+  }
+
+  > .paragraph {
+    flex: 1;
+    font-size: var(--core-fontSize-small);
+  }
+
+  > .icon {
+    align-self: end;
+  }
+}

@@ -1,0 +1,9 @@
+/* component : vector icon - ================================================================================= - */
+@use '@/scss/units' as unit;
+
+.vector-icon {
+  & {
+    width: var(--vector-icon-size, #{unit.rem(64)});
+    aspect-ratio: 1/1;
+  }
+}

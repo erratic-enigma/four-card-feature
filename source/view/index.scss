@@ -12,3 +12,11 @@
 @use '@/layout/body';
 @use '@/layout/main';
 @use '@/layout/footer';
+
+// components //
+@use '@/component/attribution-bar';
+@use '@/component/card-grid';
+@use '@/component/feature-card';
+@use '@/component/section-heading';
+@use '@/component/vector-icon';
+@use '@/component/visually-hidden';

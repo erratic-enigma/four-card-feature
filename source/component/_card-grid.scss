@@ -1,0 +1,57 @@
+/* component : card grid - =================================================================================== - */
+@use '@/scss/units' as unit;
+
+.card-grid {
+  & {
+    --grid-card-gap:        #{unit.rem(32)};
+    --grid-card-cellWidth:  1fr;
+
+    display: grid;
+    grid-template-columns: var(--grid-card-columns, initial);
+    gap: var(--grid-card-gap);
+  }
+
+@media (width >= unit.em(434)) {
+  & {
+    --grid-card-columns:    repeat(auto-fit, var(--grid-card-cellWidth));
+    --grid-card-cellWidth:  minmax(#{unit.rem(368)}, 1fr);
+  }
+}
+
+@media (width >= unit.em(1196)) {
+  & {
+    --grid-card-rows:       repeat(4, minmax(var(--grid-card-cellHeight), auto));
+    --grid-card-columns:    repeat(3, var(--grid-card-cellWidth));
+    --grid-card-cellWidth:  1fr;
+    --grid-card-cellHeight: calc(#{unit.rem(128)} - var(--grid-card-gap) / 2);
+
+    grid-template-rows: var(--grid-card-rows);
+    grid-template-areas:
+      '. card-red .'
+      'card-cyan card-red card-blue'
+      'card-cyan card-orange card-blue'
+      '. card-orange .'
+    ;
+  }
+
+  > * {
+    grid-area: var(--grid-card-cardPosition);
+  }
+
+  > :nth-child(1) {
+    --grid-card-cardPosition: card-cyan;
+  }
+
+  > :nth-child(2) {
+    --grid-card-cardPosition: card-red;
+  }
+
+  > :nth-child(3) {
+    --grid-card-cardPosition: card-orange;
+  }
+
+  > :nth-child(4) {
+    --grid-card-cardPosition: card-blue;
+  }
+}
+}

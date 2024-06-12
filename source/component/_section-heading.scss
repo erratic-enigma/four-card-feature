@@ -1,0 +1,21 @@
+/* component : section heading - ============================================================================= - */
+@use '@/scss/units' as unit;
+
+.section-heading {
+  & {
+    display: flex;
+    flex-direction: column;
+    row-gap: unit.rem(4);
+    font-size: var(--core-fontSize-large);
+    line-height: var(--core-lineHeight-small);
+    color: rgb(var(--core-neutral-trout));
+  }
+
+  > .first {
+    font-weight: var(--core-fontWeight-extraLight);
+  }
+
+  > .second {
+    font-weight: var(--core-fontWeight-semiBold);
+  }
+}
