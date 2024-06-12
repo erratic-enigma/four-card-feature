@@ -1,0 +1,10 @@
+/* core : utility classes - ================================================================================== - */
+@use '@/scss/units' as unit;
+
+.u- {
+  &js-center { justify-self: center; }
+
+  &mbe-large { margin-block-end: unit.rem(56); }
+
+  &mw-56ch { max-width: 56ch; }
+}
