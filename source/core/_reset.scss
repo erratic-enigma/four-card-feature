@@ -1,0 +1,15 @@
+/* core : reset - ============================================================================================= - */
+@use '@/scss/units' as unit;
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
+}
