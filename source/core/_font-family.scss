@@ -1,0 +1,32 @@
+/* core : font family declarations - ========================================================================= - */
+@use '@/scss/fonts' as font;
+@use '@/scss/font-face' as face;
+@use 'sass:map';
+
+/* poppins ----------------------------------------------------------------------------------------------------- */
+/* 200 (extra light) */
+@include face.declare(
+  $family: map.get(font.$poppins, 'name'),
+  $style: normal,
+  $weight: 200,
+  $url: '#{map.get(font.$poppins, "url")}',
+  $type: 'opentype'
+);
+
+/* 400 (normal) */
+@include face.declare(
+  $family: map.get(font.$poppins, 'name'),
+  $style: normal,
+  $weight: 400,
+  $url: '#{map.get(font.$poppins, "url")}',
+  $type: 'opentype'
+);
+
+/* 600 (semi bold) */
+@include face.declare(
+  $family: map.get(font.$poppins, 'name'),
+  $style: normal,
+  $weight: 600,
+  $url: '#{map.get(font.$poppins, "url")}',
+  $type: 'opentype'
+);

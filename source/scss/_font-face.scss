@@ -1,0 +1,24 @@
+// utility : font face declaration - ========================================================================= - //
+
+// functions //
+@function check-type($type) {
+  @if ($type == 'truetype') { @return 'ttf'; }
+  @if ($type == 'opentype') { @return 'otf'; }
+  @else { @return $type; }
+}
+
+@function is-variable($variable, $weight) {
+  @if ($variable) { @return 'variable'; }
+  @else { @return $weight; }
+}
+
+// mixins //
+@mixin declare($family, $style, $weight, $url, $type, $variable: false) {
+  @font-face {
+    font-display: swap;
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('#{$url}/#{is-variable($variable, $weight)}.#{check-type($type)}') format($type);
+  }
+}
