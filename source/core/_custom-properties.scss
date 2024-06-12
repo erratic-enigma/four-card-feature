@@ -1,0 +1,57 @@
+/* core : root custom properties - =========================================================================== - */
+@use '@/scss/fonts' as font;
+@use '@/scss/units' as unit;
+@use 'sass:map';
+
+:root {
+  /* colour */
+  --core-color-rajah:           34 100% 73%;
+  --core-color-cognac:          15 67% 41%;
+  --core-color-mantis:          110 41% 52%;
+  --core-color-carnation:       0 78% 62%;
+  --core-color-texasRose:       34 97% 64%;
+  --core-color-pixieGreen:      107 33% 79%;
+  --core-color-robinsEggBlue:   180 62% 55%;
+  --core-color-cornflowerBlue:  212 86% 64%;
+
+  /* neutral */
+  --core-neutral-black:     0 0 0;
+  --core-neutral-trout:     76 78 97;
+  --core-neutral-cloudy:    163 165 174;
+  --core-neutral-seashell:  240 240 240;
+  --core-neutral-alabaster: 250 250 250;
+  --core-neutral-marshland: 20 20 20;
+
+  /* font family */
+  --core-fontFamily-poppins: #{map.get(font.$poppins, 'name')};
+
+  /* font size */
+  --core-fontSize-fine:   #{unit.rem(12)};
+  --core-fontSize-small:  #{unit.rem(14)};
+  --core-fontSize-normal: #{unit.rem(16)};
+  --core-fontSize-medium: #{unit.rem(20)};
+  --core-fontSize-large:
+    /* fs: 24px - 36px | vp: 320px - 1280px */
+    clamp(#{unit.rem(24)}, 1.1881rem + 1.3274vw, #{unit.rem(36)})
+  ;
+
+  /* font weight */
+  --core-fontWeight-extraLight: 200;
+  --core-fontWeight-normal:     400;
+  --core-fontWeight-semiBold:   600;
+
+  /* line height */
+  --core-lineHeight-condensed:  1;
+  --core-lineHeight-small:      1.4;
+  --core-lineHeight-normal:     1.6;
+
+  /* layout */
+  --core-layout-gutter: #{unit.rem(32)};
+
+  /* timing */
+  --core-time-fast: 250ms;
+
+  /* system font family */
+  --system-fontFamily-mono: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
+  --system-fontFamily-sansSerif: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'segoe ui', 'helvetica neue', helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
