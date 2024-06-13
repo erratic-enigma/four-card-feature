@@ -20,7 +20,7 @@ This is my solution to the [Four card feature section](https://frontendmentor.io
 
 ### Links
 
-- Solution URL: <https://frontendmentor.io/solutions>
+- Solution URL: <https://frontendmentor.io/solutions/four-card-feature-section-H85W4fxr6g>
 - Live Site URL: <https://erratic-enigma.github.io/four-card-feature>
 
 ## My process
